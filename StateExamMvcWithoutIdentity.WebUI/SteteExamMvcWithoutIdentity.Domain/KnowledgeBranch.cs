@@ -1,12 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Web.Mvc;
 
 namespace SteteExamMvcWithoutIdentity.Domain
 {
     [Table("Field of knowledge")]
     public class KnowledgeBranch
     {
-        [Key]
+        [HiddenInput]
+        public int Id
+        {
+            get;
+            set;
+        }
         [Required]
         [MinLength(2)]
         [MaxLength(2)]
@@ -16,6 +22,8 @@ namespace SteteExamMvcWithoutIdentity.Domain
         [Required]
         [MinLength(1)]
         public string Name { get; set; }
+
+        public bool IsActual { get; set; }
 
         public override bool Equals(object obj)
         {
