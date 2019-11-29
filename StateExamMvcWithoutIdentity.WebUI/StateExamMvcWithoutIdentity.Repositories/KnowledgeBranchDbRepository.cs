@@ -18,7 +18,7 @@ namespace StateExamMvcWithoutIdentity.Repositories
         {
             get
             {
-                return context.KnowledgeField;
+                return context.KnowledgeField.Where(x=>x.IsActual);
             }
         }
 
@@ -41,7 +41,7 @@ namespace StateExamMvcWithoutIdentity.Repositories
 
         public bool DeleteKnowledgeBranch(int id)
         {
-            KnowledgeBranch knowledgeBranch = context.KnowledgeField.FirstOrDefault(x => x.Code == code);
+            KnowledgeBranch knowledgeBranch = context.KnowledgeField.FirstOrDefault(x => x.Id == id);
             if (knowledgeBranch!=null)
             {
                 try
@@ -87,19 +87,19 @@ namespace StateExamMvcWithoutIdentity.Repositories
         public KnowledgeBranch FindById(int id)
         {
             logger.Info("Method FindById was called");
-            return context.KnowledgeField.FirstOrDefault(x => x.Id == id);
+            return context.KnowledgeField.FirstOrDefault(x => x.Id == id && x.IsActual);
         }
 
         public KnowledgeBranch FindByName(string name)
         {
             logger.Info("Method FindByName was called");
-            return context.KnowledgeField.FirstOrDefault(x => x.Name == name);
+            return context.KnowledgeField.FirstOrDefault(x => x.Name == name && x.IsActual);
         }
 
         public IQueryable<KnowledgeBranch> FindBySpecifiedCondition(Func<KnowledgeBranch, bool> condition)
         {
             logger.Info("Method FindBySpecifiedCondition called");
-            return context.KnowledgeField.Where(condition).AsQueryable();
+            return context.KnowledgeField.Where(x=>condition(x) && x.IsActual).AsQueryable();
         }
     }
 }

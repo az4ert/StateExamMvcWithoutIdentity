@@ -35,7 +35,8 @@ namespace SteteExamMvcWithoutIdentity.Domain
         }
         public override int GetHashCode()
         {
-            return ToString().GetHashCode();
+            string str = $"{Id} " + ToString() + " " + IsActual.ToString();
+            return str.GetHashCode();
         }
     }
 }
