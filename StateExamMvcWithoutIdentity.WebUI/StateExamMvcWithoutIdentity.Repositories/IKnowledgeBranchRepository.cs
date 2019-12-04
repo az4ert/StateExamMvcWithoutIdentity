@@ -8,6 +8,7 @@ namespace StateExamMvcWithoutIdentity.Repositories
     {
         IQueryable<KnowledgeBranch> KnowledgeField { get; }
         KnowledgeBranch FindById(int id);
+        KnowledgeBranch FindByCode(string code);
         KnowledgeBranch FindByName(string name);
         IQueryable<KnowledgeBranch> FindBySpecifiedCondition(Func<KnowledgeBranch, bool> condition);
 

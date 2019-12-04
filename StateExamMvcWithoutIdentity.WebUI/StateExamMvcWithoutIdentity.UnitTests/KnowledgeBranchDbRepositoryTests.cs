@@ -108,10 +108,28 @@ namespace StateExamMvcWithoutIdentity.UnitTests
             };
             repository = new KnowledgeBranchDbRepository(dbContext);
             KnowledgeBranch factKnowledgeBranch = repository.FindByName("Управління та адміністрування");
-            KnowledgeBranch nullSpeciality = repository.FindByName("Автоматизація та приладобудування");
+            KnowledgeBranch nullKnowledgeBranch = repository.FindByName("Автоматизація та приладобудування");
 
             Assert.AreEqual(knowledgeBranch, factKnowledgeBranch);
-            Assert.IsNull(nullSpeciality);
+            Assert.IsNull(nullKnowledgeBranch);
+        }
+
+        [TestMethod]
+        public void CanRepositoryFindKnowledgeBranchByCode()
+        {
+            KnowledgeBranch knowledgeBranch = new KnowledgeBranch
+            {
+                Id = 1,
+                Code = "07",
+                Name = "Управління та адміністрування",
+                IsActual = true
+            };
+            repository = new KnowledgeBranchDbRepository(dbContext);
+            KnowledgeBranch factKnowledgeBranch = repository.FindByCode("07");
+            KnowledgeBranch nullKnowledgeBranch = repository.FindByCode("15");
+
+            Assert.AreEqual(knowledgeBranch, factKnowledgeBranch);
+            Assert.IsNull(nullKnowledgeBranch);
         }
 
         [TestMethod]

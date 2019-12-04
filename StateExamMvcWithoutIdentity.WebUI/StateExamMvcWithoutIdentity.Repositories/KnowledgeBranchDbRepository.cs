@@ -90,6 +90,12 @@ namespace StateExamMvcWithoutIdentity.Repositories
             return context.KnowledgeField.FirstOrDefault(x => x.Id == id && x.IsActual);
         }
 
+        public KnowledgeBranch FindByCode(string code)
+        {
+            logger.Info("Method FindByCode was called");
+            return context.KnowledgeField.FirstOrDefault(x => x.Code == code && x.IsActual);
+        }
+
         public KnowledgeBranch FindByName(string name)
         {
             logger.Info("Method FindByName was called");

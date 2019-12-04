@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateExamMvcWithoutIdentity
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateExamMvcWithoutIdentity.Repositories", "StateExamMvcWithoutIdentity.Repositories\StateExamMvcWithoutIdentity.Repositories.csproj", "{93D38650-71E4-405C-8859-79ACA5D0ABDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateExamMvc.Services", "StateExamMvc.Services\StateExamMvc.Services.csproj", "{CA30B086-6208-4D48-B1B3-922734644AE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{93D38650-71E4-405C-8859-79ACA5D0ABDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93D38650-71E4-405C-8859-79ACA5D0ABDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93D38650-71E4-405C-8859-79ACA5D0ABDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA30B086-6208-4D48-B1B3-922734644AE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA30B086-6208-4D48-B1B3-922734644AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA30B086-6208-4D48-B1B3-922734644AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA30B086-6208-4D48-B1B3-922734644AE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

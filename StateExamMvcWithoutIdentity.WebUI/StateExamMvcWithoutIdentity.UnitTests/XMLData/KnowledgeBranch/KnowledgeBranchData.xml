@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<KnowledgeField>
+  <KnowledgeBranch>
+    <id>6</id>
+    <code>15</code>
+    <name>qwerty</name>
+    <actual>true</actual>
+    <error>DbError</error>
+  </KnowledgeBranch>
+  <KnowledgeBranch>
+    <id>1</id>
+    <code>07</code>
+    <name>qwerty</name>
+    <actual>true</actual>
+    <error>DuplicateCode</error>
+  </KnowledgeBranch>
+  <KnowledgeBranch>
+    <id>1</id>
+    <code>12</code>
+    <name>Управління та адміністрування</name>
+    <actual>true</actual>
+    <error>DuplicateName</error>
+  </KnowledgeBranch>
+  <KnowledgeBranch>
+    <id>1</id>
+    <code>15</code>
+    <name>Автоматизація та приладобудування</name>
+    <actual>true</actual>
+    <error>None</error>
+  </KnowledgeBranch>
+</KnowledgeField>
